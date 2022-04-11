@@ -14,7 +14,13 @@ def test_pair_to_number(major_color, minor_color, expected_pair_number):
   pair_number = get_pair_number_from_color(major_color, minor_color)
   assert(pair_number == expected_pair_number)
 
+def print_manual():
+  for x in constants.MAJOR_COLORS:
+    for y in constants.MINOR_COLORS:
+      print(get_pair_number_from_color(x, y), x, y)
+
 if __name__ == '__main__':
+  print_manual()
   test_number_to_pair(4, 'White', 'Brown')
   test_number_to_pair(5, 'White', 'Slate')
   test_pair_to_number('Black', 'Orange', 12)
